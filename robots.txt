@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: 
+
+Sitemap: http://www.bml67.com/sitemap.xml
+
