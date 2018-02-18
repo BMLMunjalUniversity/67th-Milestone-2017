@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Django Project</title>
+</head>
+<body>
+<h1>
+    Add a Category
+</h1>
+<div>
+<form id="category_form" method="post" action="\67milestone/success">
+{% csrf_token %}
+    {% for hidden in form.hidden_fields %}
+    {{ hidden }}
+    {% endfor %}
+    {% for field in form.visible_fields %}
+    {{ field.errors }}
+    {{ field.help_text }}
+    {{ field }}
+    <br>
+    {% endfor %}
+    <input type="submit" name="submit" value="Create Category">
+</form>
+</div>
+</body>
+</html>
